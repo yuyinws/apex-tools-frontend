@@ -1,7 +1,6 @@
-# Vue 3 + Vite
+## Apex-Tools-Frontend
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
-
-## Recommended IDE Setup
-
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+- 一个[Apex 信息查询网站](https://apex.yuyinws.top)
+- 使用 Vite+Vue3+tailwindCSS 搭建
+- 网站托管于 Vercel
+- [后端项目](https://github.com/yuyinws/apex-tools-serverless)

@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 3023868 */
+  src: url('iconfont.woff2?t=1639653927959') format('woff2'),
+       url('iconfont.woff?t=1639653927959') format('woff'),
+       url('iconfont.ttf?t=1639653927959') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-github:before {
+  content: "\e651";
+}
+
+.icon-icons-apex-legends:before {
+  content: "\e608";
+}
+
