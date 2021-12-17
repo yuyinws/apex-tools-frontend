@@ -3,9 +3,11 @@
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
 // import Map from '@/views/map.vue'
 import Footer from '@/components/Footer.vue'
+import Header from '@/components/Header.vue'
 </script>
 
 <template>
+  <Header />
   <router-view></router-view>
   <Footer />
 </template>

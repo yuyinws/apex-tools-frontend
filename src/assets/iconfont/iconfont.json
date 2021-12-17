@@ -6,6 +6,34 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "1420793",
+      "name": "xbox 360",
+      "font_class": "xbox",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "1718580",
+      "name": "playstation",
+      "font_class": "playstation",
+      "unicode": "e6df",
+      "unicode_decimal": 59103
+    },
+    {
+      "icon_id": "3876218",
+      "name": "origin",
+      "font_class": "origin",
+      "unicode": "e622",
+      "unicode_decimal": 58914
+    },
+    {
+      "icon_id": "594021",
+      "name": "MAP",
+      "font_class": "map",
+      "unicode": "e621",
+      "unicode_decimal": 58913
+    },
+    {
       "icon_id": "9785618",
       "name": "github",
       "font_class": "github",
