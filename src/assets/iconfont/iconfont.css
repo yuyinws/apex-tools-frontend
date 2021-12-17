@@ -1,8 +1,8 @@
 @font-face {
   font-family: "iconfont"; /* Project id 3023868 */
-  src: url('iconfont.woff2?t=1639653927959') format('woff2'),
-       url('iconfont.woff?t=1639653927959') format('woff'),
-       url('iconfont.ttf?t=1639653927959') format('truetype');
+  src: url('iconfont.woff2?t=1639728041080') format('woff2'),
+       url('iconfont.woff?t=1639728041080') format('woff'),
+       url('iconfont.ttf?t=1639728041080') format('truetype');
 }
 
 .iconfont {
@@ -11,6 +11,22 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-xbox:before {
+  content: "\e60a";
+}
+
+.icon-playstation:before {
+  content: "\e6df";
+}
+
+.icon-origin:before {
+  content: "\e622";
+}
+
+.icon-map:before {
+  content: "\e621";
 }
 
 .icon-github:before {

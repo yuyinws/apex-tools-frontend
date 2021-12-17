@@ -3,13 +3,24 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 const routes = [
   {
     path: '/',
-    redirect: '/map'
+    redirect: '/profile',
   },
   {
     path: '/map',
     name: 'map',
-    component: ()=>import('@/views/map.vue')
-  }
+    meta: {
+      title:'地图轮换'
+    },
+    component: () => import('@/views/map.vue'),
+  },
+  {
+    path: '/profile/:platform?/:player?',
+    name: 'profile',
+    meta: {
+      title:'战绩查询'
+    },
+    component: () => import('@/views/profile.vue'),
+  },
 ]
 
 const router = createRouter({

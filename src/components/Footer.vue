@@ -1,16 +1,27 @@
 <template>
-  <div class="text-gray-600 text-xs w-full fixed bottom-2 text-center">
-    <div>Made By YuYin</div>
-    <div @click="toGithub" class="flex items-center justify-center">
-      <i class="iconfont icon-github mr-1"></i>
-      <div>Github</div>
-    </div>
-  </div>
+    <Tabbar v-model="activePage" @change="onPageChange">
+      <TabbarItem name="profile" icon="fire-o"> 战绩查询 </TabbarItem>
+      <TabbarItem name="map" icon="home-o"> 
+        <div class="relative bottom-2">地图轮换</div>
+        <template #icon="props">
+          <i :class="['iconfont','icon-map','text-3xl', `${props.active ? 'text-active' : 'text-gray-500'}`]"></i>
+        </template>
+      </TabbarItem>
+    </Tabbar>
 </template>
 
 <script setup>
-const toGithub = () => {
-  window.location.href = 'https://github.com/yuyinws/apex-tools-frontend'
+import { ref } from 'vue'
+import { Tabbar, TabbarItem } from 'vant'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
+const onPageChange = (event) => {
+  router.replace({
+    name: event,
+  })
 }
+const activePage = ref('profile')
 </script>
 <style scoped lang="scss"></style>
