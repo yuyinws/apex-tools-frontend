@@ -158,7 +158,7 @@ import _axios from '../util/axios'
 import { useRoute } from 'vue-router'
 import { base } from '../util/translate'
 const route = useRoute()
-const isLoading = ref(true)
+const isLoading = ref(false)
 const params = reactive({
   platform: 'PC',
   player: '',
