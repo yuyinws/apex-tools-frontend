@@ -9,7 +9,7 @@ const routes = [
     path: '/map',
     name: 'map',
     meta: {
-      title:'地图轮换'
+      title: '地图轮换',
     },
     component: () => import('@/views/map.vue'),
   },
@@ -17,7 +17,8 @@ const routes = [
     path: '/profile/:platform?/:player?',
     name: 'profile',
     meta: {
-      title:'战绩查询'
+      title: '战绩查询',
+      keepAlive: true,
     },
     component: () => import('@/views/profile.vue'),
   },
