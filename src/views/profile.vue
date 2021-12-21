@@ -146,7 +146,11 @@
       </div>
     </div>
   </div>
-  <van-loading v-if="isLoading" class="flex top-36 z-50" color="#1989fa" vertical
+  <van-loading
+    v-if="isLoading"
+    class="flex top-36 z-50"
+    color="#1989fa"
+    vertical
     >加载中...</van-loading
   >
 </template>
@@ -157,6 +161,7 @@ import { Search, RadioGroup, Radio } from 'vant'
 import _axios from '../util/axios'
 import { useRoute } from 'vue-router'
 import { base } from '../util/translate'
+import { Toast } from 'vant'
 const route = useRoute()
 const isLoading = ref(false)
 const params = reactive({
@@ -170,6 +175,10 @@ const profile = reactive({
 })
 
 const onSearch = async () => {
+  if (!params.player) {
+    Toast.fail('请输入玩家ID')
+    return
+  }
   profile.global = {}
   profile.legendArr = []
   profile.realtime = []
