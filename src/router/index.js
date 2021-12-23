@@ -22,6 +22,14 @@ const routes = [
     },
     component: () => import('@/views/profile.vue'),
   },
+  {
+    path: '/about',
+    name: 'about',
+    meta: {
+      title: '关于',
+    },
+    component: () => import('@/views/about.vue'),
+  },
 ]
 
 const router = createRouter({
