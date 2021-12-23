@@ -7,6 +7,7 @@
           <i :class="['iconfont','icon-map','text-3xl', `${props.active ? 'text-active' : 'text-gray-500'}`]"></i>
         </template>
       </TabbarItem>
+      <TabbarItem name="about" icon="info-o">关于</TabbarItem>
     </Tabbar>
 </template>
 
