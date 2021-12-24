@@ -4,6 +4,7 @@
 // import Map from '@/views/map.vue'
 import Footer from '@/components/Footer.vue'
 import Header from '@/components/Header.vue'
+import ReloadPrompt from './ReloadPrompt.vue'
 </script>
 
 <template>

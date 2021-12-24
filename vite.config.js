@@ -3,6 +3,7 @@ import vue from '@vitejs/plugin-vue'
 import { resolve } from 'path'
 import { VitePWA } from 'vite-plugin-pwa'
 import styleImport from 'vite-plugin-style-import'
+import replace from '@rollup/plugin-replace'
 
 const pwaOptions = {
   manifest: {
@@ -34,12 +35,13 @@ const pwaOptions = {
   },
 }
 
+const replaceOptions = { __DATE__: new Date().toISOString() }
 const claims = process.env.CLAIMS === 'true'
 const reload = process.env.RELOAD_SW === 'true'
 
 if (process.env.SW === 'true') {
   pwaOptions.srcDir = 'src'
-  pwaOptions.filename = claims ? 'claims-sw.ts' : 'prompt-sw.ts'
+  pwaOptions.filename = claims ? 'claims-sw.js' : 'prompt-sw.js'
   pwaOptions.strategies = 'injectManifest'
   ;(pwaOptions.manifest).name = 'Apex Tools'
   ;(pwaOptions.manifest).short_name = 'Apex Tools'
@@ -48,6 +50,10 @@ if (process.env.SW === 'true') {
 if (claims)
   pwaOptions.registerType = 'autoUpdate'
 
+  if (reload) {
+    // @ts-ignore
+    replaceOptions.__RELOAD_SW__ = 'true'
+  }
 
 
 export default defineConfig({
