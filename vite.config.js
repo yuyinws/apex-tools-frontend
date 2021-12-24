@@ -12,6 +12,7 @@ const pwaOptions = {
     name: 'Apex Tools',
     short_name: 'Apex Tools',
     theme_color: '#ffffff',
+    start_url: 'https://apex-tools-frontend-git-dev-yuyinws.vercel.app/',
     icons: [
       {
         src: 'pwa-192x192.png', // <== don't add slash, for testing
