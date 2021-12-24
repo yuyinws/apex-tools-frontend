@@ -33,7 +33,6 @@ const pwaOptions = {
   },
 }
 
-const replaceOptions = { __DATE__: new Date().toISOString() }
 const claims = process.env.CLAIMS === 'true'
 const reload = process.env.RELOAD_SW === 'true'
 
@@ -47,11 +46,6 @@ if (process.env.SW === 'true') {
 
 if (claims)
   pwaOptions.registerType = 'autoUpdate'
-
-if (reload) {
-  // @ts-ignore
-  replaceOptions.__RELOAD_SW__ = 'true'
-}
 
 
 
@@ -67,7 +61,7 @@ export default defineConfig({
         },
       ],
     }),
-    VitePWA()
+    VitePWA(pwaOptions)
   ],
   resolve: {
     extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json', '.vue'],
