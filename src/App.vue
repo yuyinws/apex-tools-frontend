@@ -16,6 +16,7 @@ import ReloadPrompt from './ReloadPrompt.vue'
     <component :is="Component" v-if="!$route.meta.keepAlive" />
   </router-view>
   <Footer />
+  <ReloadPrompt />
 </template>
 
 <style></style>
