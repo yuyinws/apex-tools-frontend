@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { resolve } from 'path'
+import { VitePWA } from 'vite-plugin-pwa'
 import styleImport from 'vite-plugin-style-import'
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -15,6 +16,7 @@ export default defineConfig({
         },
       ],
     }),
+    VitePWA()
   ],
   resolve: {
     extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json', '.vue'],
