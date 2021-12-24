@@ -13,7 +13,6 @@ const pwaOptions = {
     name: 'Apex Tools',
     short_name: 'Apex Tools',
     theme_color: '#ffffff',
-    start_url: '/',
     icons: [
       {
         src: 'pwa-192x192.png', // <== don't add slash, for testing
@@ -68,7 +67,8 @@ export default defineConfig({
         },
       ],
     }),
-    VitePWA(pwaOptions)
+    VitePWA(pwaOptions),
+    replace(replaceOptions),
   ],
   resolve: {
     extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json', '.vue'],
