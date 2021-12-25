@@ -1,4 +1,4 @@
-export const base = {
+export const baseMap = {
   battle_royale: '大逃杀',
   arenas: '竞技场',
   ranked: '排位大逃杀',
@@ -28,12 +28,25 @@ export const base = {
   Valkyrie: '瓦尔基里',
   Seer: '希尔',
   Ash: '艾什',
-  REONZE: '青铜',
+  Bronze: '青铜',
   Silver: '白银',
   Gold: '黄金',
   Platinum: '白金',
   Diamond: '钻石',
   Master: '大师',
   Apexpredator: '猎杀',
-  Unranked:'无数据'
+  Unranked: '无数据',
+}
+
+export const base = (name) => {
+  return baseMap[name] || name
+}
+
+export const nameReplace = (name) => {
+  name = name.toLowerCase()
+  name = name.replace(/kills/, '击杀:')
+  name = name.replace(/wins/, '胜利:')
+  name = name.replace(/season/, '赛季')
+  name = name.replace(/damage/, '伤害:')
+  return name
 }
