@@ -1,3 +1,15 @@
+<template>
+  <Header />
+  <router-view v-slot="{ Component }">
+    <keep-alive>
+      <component :is="Component" v-if="$route.meta.keepAlive" />
+    </keep-alive>
+    <component :is="Component" v-if="!$route.meta.keepAlive" />
+    <Footer />
+  </router-view>
+  <ReloadPrompt />
+</template>
+
 <script setup>
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
@@ -6,17 +18,5 @@ import Footer from '@/components/Footer.vue'
 import Header from '@/components/Header.vue'
 import ReloadPrompt from './ReloadPrompt.vue'
 </script>
-
-<template>
-  <Header />
-  <router-view v-slot="{ Component }">
-    <keep-alive>
-      <component :is="Component" v-if="$route.meta.keepAlive" />
-    </keep-alive>
-    <component :is="Component" v-if="!$route.meta.keepAlive" />
-  </router-view>
-  <Footer />
-  <ReloadPrompt />
-</template>
 
 <style></style>
