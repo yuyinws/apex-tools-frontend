@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "577337",
+      "name": "分享",
+      "font_class": "fenxiang",
+      "unicode": "e739",
+      "unicode_decimal": 59193
+    },
+    {
       "icon_id": "1420793",
       "name": "xbox 360",
       "font_class": "xbox",

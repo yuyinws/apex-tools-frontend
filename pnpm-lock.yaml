@@ -5,6 +5,7 @@ specifiers:
   '@vitejs/plugin-vue': ^2.0.0
   autoprefixer: ^10.4.0
   axios: ^0.24.0
+  html2canvas: ^1.3.3
   postcss: ^8.4.5
   tailwindcss: ^3.0.5
   vant: '3'
@@ -18,6 +19,7 @@ specifiers:
 dependencies:
   '@rollup/plugin-replace': 3.0.0
   axios: 0.24.0
+  html2canvas: 1.3.3
   vant: 3.3.7_vue@3.2.26
   vite-plugin-style-import: 1.4.0_vite@2.7.2
   vue: 3.2.26
@@ -1550,6 +1552,16 @@ packages:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
     dev: true
 
+  /base64-arraybuffer/0.2.0:
+    resolution: {integrity: sha512-7emyCsu1/xiBXgQZrscw/8KPRT44I4Yq9Pe6EGs3aPRTsWuggML1/1DTuZUuIaJPIm1FTDUVXl4x/yW8s0kQDQ==}
+    engines: {node: '>= 0.6.0'}
+    dev: false
+
+  /base64-arraybuffer/1.0.1:
+    resolution: {integrity: sha512-vFIUq7FdLtjZMhATwDul5RZWv2jpXQ09Pd6jcVEOvIsqCWTRFD/ONHNfyOS8dA/Ippi5dsIgpyKWKZaAKZltbA==}
+    engines: {node: '>= 0.6.0'}
+    dev: false
+
   /binary-extensions/2.2.0:
     resolution: {integrity: sha512-jDctJ/IVQbZoJykoeHbhXpOlNBqGNcwXJKJog42E5HDPUwQTSdjCHdihjj0DlnheQ7blbT6dHOafNAiS8ooQKA==}
     engines: {node: '>=8'}
@@ -1745,6 +1757,12 @@ packages:
     resolution: {integrity: sha512-v1plID3y9r/lPhviJ1wrXpLeyUIGAZ2SHNYTEapm7/8A9nLPoyvVp3RK/EPFqn5kEznyWgYZNsRtYYIWbuG8KA==}
     engines: {node: '>=8'}
     dev: true
+
+  /css-line-break/2.0.1:
+    resolution: {integrity: sha512-gwKYIMUn7xodIcb346wgUhE2Dt5O1Kmrc16PWi8sL4FTfyDj8P5095rzH7+O8CTZudJr+uw2GCI/hwEkDJFI2w==}
+    dependencies:
+      base64-arraybuffer: 0.2.0
+    dev: false
 
   /cssesc/3.0.0:
     resolution: {integrity: sha512-/Tb/JcjK111nNScGob5MNtsntNM1aCNUDipB/TkwZFhyDrrE47SOx/18wF2bbjgc3ZzCSKW1T5nt5EbFoAz/Vg==}
@@ -2230,6 +2248,14 @@ packages:
     dependencies:
       capital-case: 1.0.4
       tslib: 2.3.1
+    dev: false
+
+  /html2canvas/1.3.3:
+    resolution: {integrity: sha512-nQi0ayEY1cMiUMbq/F5hRwMAqsRMo7NIP6VaCqaXnXO6b/FfZO49oSfIJjdyRha28EuY8D6FBCzQOXPQV0TCrA==}
+    engines: {node: '>=8.0.0'}
+    dependencies:
+      css-line-break: 2.0.1
+      text-segmentation: 1.0.2
     dev: false
 
   /idb/6.1.5:
@@ -3053,6 +3079,12 @@ packages:
       source-map-support: 0.5.21
     dev: true
 
+  /text-segmentation/1.0.2:
+    resolution: {integrity: sha512-uTqvLxdBrVnx/CFQOtnf8tfzSXFm+1Qxau7Xi54j4OPTZokuDOX8qncQzrg2G8ZicAMOM8TgzFAYTb+AqNO4Cw==}
+    dependencies:
+      utrie: 1.0.1
+    dev: false
+
   /tmp/0.2.1:
     resolution: {integrity: sha512-76SUhtfqR2Ijn+xllcI5P1oyannHNHByD80W1q447gU3mp9G9PSpGdWmjUOHRDPiHYacIk66W7ubDTuPF3BEtQ==}
     engines: {node: '>=8.17.0'}
@@ -3156,6 +3188,12 @@ packages:
   /util-deprecate/1.0.2:
     resolution: {integrity: sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=}
     dev: true
+
+  /utrie/1.0.1:
+    resolution: {integrity: sha512-JPaDXF3vzgZxfeEwutdGzlrNoVFL5UvZcbO6Qo9D4GoahrieUPoMU8GCpVpR7MQqcKhmShIh8VlbEN3PLM3EBg==}
+    dependencies:
+      base64-arraybuffer: 1.0.1
+    dev: false
 
   /vant/3.3.7_vue@3.2.26:
     resolution: {integrity: sha512-xDNqdBvBAELwkkC4QqzXvcqQJMCP6l0faYDH0aU1dfkIm7Muc+7gqyHMVhPKPFcDGBP33ilZd0Vg2+JoIQWitw==}
