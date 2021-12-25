@@ -7,7 +7,7 @@
     <component :is="Component" v-if="!$route.meta.keepAlive" />
     <Footer />
   </router-view>
-  <!-- <ReloadPrompt /> -->
+  <ReloadPrompt />
 </template>
 
 <script setup>
