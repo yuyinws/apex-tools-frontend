@@ -1,5 +1,4 @@
 <template>
-  <!-- <Header /> -->
   <router-view v-slot="{ Component }">
     <keep-alive>
       <component :is="Component" v-if="$route.meta.keepAlive" />
@@ -15,7 +14,6 @@
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
 // import Map from '@/views/map.vue'
 import Footer from '@/components/Footer.vue'
-import Header from '@/components/Header.vue'
 import ReloadPrompt from './ReloadPrompt.vue'
 </script>
 
