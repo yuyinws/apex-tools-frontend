@@ -271,8 +271,6 @@ const onSearch = async () => {
   profile.global = global
   profile.realtime = realtime
   profile.legendArr = legendArr
-  route.params.platform = 'X1'
-  // console.log(profile)
 }
 const formatImageUrl = (url) => {
   const urlArray = url.split('/')
