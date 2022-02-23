@@ -211,7 +211,7 @@ const onSelect = async (option) => {
   if (option.id === 1) {
     try {
       await navigator.clipboard.writeText(
-        `https://apex.yuyinws.top/#/profile/${params.platform}/${params.player}`
+        `https://apex.yuy1n.io/#/profile/${params.platform}/${params.player}`
       )
       Toast.success('复制成功！')
       isShareSheetShow.value = false
